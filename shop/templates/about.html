@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+{% block title %}About Us{% endblock title %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/about.css"%}">
+<div class="timeline">
+
+    <div class="holder left-holder">
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="10" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+        </div>
+
+        <div class="text-box">
+            <h2>Who are we?</h2>
+            <p>At Circuit Bunny, we're not just a store; we're a community dedicated to fueling your passion for electronics and robotics. Since our launch on May 11, we've been on a mission to be your go-to destination for all things electrical and robotic. Our journey began with a commitment to providing high-quality components and exceptional service, and now, with over 100 satisfied customers and 5000 components sold, we're ready to take the next step.</p>
+            <span class="left-holder-arrow"></span>
+        </div>
+    </div>
+
+
+    <div class="holder right-holder">
+        <div class="icon">
+            <svg color="#fff" xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"/>
+        </svg>
+        </div>
+        <div class="text-box">
+            <h2>Our Philosophy</h2>
+            <p>Our philosophy is simple: to make learning and innovation accessible to everyone. With a comprehensive range of products, from essential breadboards to cutting-edge Arduinos, we've curated a collection that caters to both novices and seasoned enthusiasts alike.
+                </p>
+            <span class="right-holder-arrow"></span>
+        </div>
+    </div>
+
+
+    <div class="holder left-holder">
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M80 104c0-22.1-17.9-40-40-40S0 81.9 0 104v56 64V325.5c0 25.5 10.1 49.9 28.1 67.9L128 493.3c12 12 28.3 18.7 45.3 18.7H240c26.5 0 48-21.5 48-48V385.1c0-29.7-11.8-58.2-32.8-79.2l-25.3-25.3 0 0-15.2-15.2-32-32c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l32 32 15.2 15.2c11 11 9.2 29.2-3.7 37.8c-9.7 6.5-22.7 5.2-31-3.1L98.7 309.5c-12-12-18.7-28.3-18.7-45.3V224 144 104zm480 0v40 80 40.2c0 17-6.7 33.3-18.7 45.3l-51.1 51.1c-8.3 8.3-21.3 9.6-31 3.1c-12.9-8.6-14.7-26.9-3.7-37.8l15.2-15.2 32-32c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-32 32-15.2 15.2 0 0-25.3 25.3c-21 21-32.8 49.5-32.8 79.2V464c0 26.5 21.5 48 48 48h66.7c17 0 33.3-6.7 45.3-18.7l99.9-99.9c18-18 28.1-42.4 28.1-67.9V224 160 104c0-22.1-17.9-40-40-40s-40 17.9-40 40z"/></svg>
+        </div>
+        <div class="text-box">
+            <h2>Our Values</h2>
+            <p>Our values include a commitment to offering competitive prices, ensuring fast shipping, and providing top-notch customer service. We understand that having the right components is crucial to the success of creative projects, and that's why we've meticulously selected products that are not only reliable but also foster creativity and exploration.
+                </p>
+            <span class="left-holder-arrow"></span>
+        </div>
+    </div>
+
+
+    <div class="holder right-holder">
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M.3 89.5C.1 91.6 0 93.8 0 96V224 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64V224 96c0-35.3-28.7-64-64-64H64c-2.2 0-4.4 .1-6.5 .3c-9.2 .9-17.8 3.8-25.5 8.2C21.8 46.5 13.4 55.1 7.7 65.5c-3.9 7.3-6.5 15.4-7.4 24zM48 224H464l0 192c0 8.8-7.2 16-16 16L64 432c-8.8 0-16-7.2-16-16l0-192z"/></svg>
+        </div>
+        <div class="text-box">
+            <h2>What should our Website Reflect?</h2>
+            <p>Already having delivered to over 100 individuals, we've witnessed the power of Circuit Bunny components bringing ideas to life. The success of our startup is a testament to the dedication of our team of experts who are as passionate about circuits as you are. As we transition to our  online platform, we want our website to reflect the vibrant community that Circuit Bunny has become.</p>
+                <span class="right-holder-arrow"></span>
+        </div>
+    </div>
+
+
+    <div class="holder left-holder">
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M36.8 192H603.2c20.3 0 36.8-16.5 36.8-36.8c0-7.3-2.2-14.4-6.2-20.4L558.2 21.4C549.3 8 534.4 0 518.3 0H121.7c-16 0-31 8-39.9 21.4L6.2 134.7c-4 6.1-6.2 13.2-6.2 20.4C0 175.5 16.5 192 36.8 192zM64 224V384v80c0 26.5 21.5 48 48 48H336c26.5 0 48-21.5 48-48V384 224H320V384H128V224H64zm448 0V480c0 17.7 14.3 32 32 32s32-14.3 32-32V224H512z"/></svg>
+        </div>
+        <div class="text-box">
+            <h2>What do we sell?</h2>
+            <p>At Circuit Bunny, our product range spans the entire spectrum of electronic and robotics components, ensuring that we cater to every enthusiast's needs. From pocket-friendly options like LEDs priced at just BDT 1.00, to high-end technological marvels like the Raspberry Pi at 14,000 BDT, we pride ourselves on offering a diverse selection that accommodates both beginners and seasoned professionals. Whether someone’s embarking on a simple DIY project or diving into the complexities of advanced robotics, our shelves are stocked with everything he needs. Our commitment is to make innovation accessible, and with a price range as dynamic as our product catalog, we aim to empower every customer to bring their ideas to life, no matter the scale or budget.</p>
+            <span class="left-holder-arrow"></span>
+        </div>
+    </div>
+
+</div>
+
+<div class="name-cards">
+
+    <h1 class="name-cards_text">Our Members</h1>
+
+    <div class="container-fluid">
+        <div class="row member-cards">
+          <!-- Member Card 1 -->
+          <div class="col-md-4">
+            <div class="member-card animated flipInX">
+            {% load static %}
+              <img src="{% static "images/members/prottoy.jpg" %}" alt="Member Image">
+              <h2>Aquib Ahmed Prottoy</h2>
+              <p>Chief Executive Officer (CEO)</p>
+              <div class="social-buttons">
+                <a href="https://www.facebook.com/aquibprottoy" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Member Card 2 -->
+            <!-- Member Card 1 -->
+            <div class="col-md-4">
+              <div class="member-card animated flipInX">
+              {% load static %}
+                <img src="{% static "images/members/pulok.jpg" %}" alt="Member Image">
+                <h2>Pulak Bhowmik</h2>
+                <p>Chief Operating Officer (COO)</p>
+                <div class="social-buttons">
+                  <a href="https://www.facebook.com/ThePulakBhowmik/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+              </div>
+            </div>
+
+          <!-- Member Card 3 -->
+            <!-- Member Card 1 -->
+            <div class="col-md-4">
+              <div class="member-card animated flipInX">
+              {% load static %}
+                <img src="{% static "images/members/jahnabee.png" %}" alt="Member Image" >
+                <h2>Jahnabee Naha Joya </h2>
+                <p>Accounts manager</p>
+                <div class="social-buttons">
+                  <a href="https://www.facebook.com/profile.php?id=100080927447454&mibextid=ZbWKwLk" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+              </div>
+            </div>
+
+
+            {% comment %} Member card 4 {% endcomment %}
+            <div class="col-md-4">
+                <div class="member-card animated flipInX">
+                {% load static %}
+                  <img src="{% static "images/members/female.jpg" %}" alt="Member Image">
+                  <h2>Nurjahan Ara Hossain</h2>
+                  <p>Graphics Designer</p>
+                  <div class="social-buttons">
+                    <a href="https://www.facebook.com/nurjahan.hossain.2703" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              {% comment %} Member card 5 {% endcomment %}
+              <div class="col-md-4">
+                <div class="member-card animated flipInX pb-5">
+                {% load static %}
+                  <img src="{% static "images/members/female.jpg" %}" alt="Member Image">
+                  <h2>Fairuz Maliha</h2>
+                  <p>Video Editor</p>
+                  <div class="social-buttons">
+                    <a href="https://www.facebook.com/fairuz.maliha.3950" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              {% comment %} Member card 6 {% endcomment %}
+              <div class="col-md-4">
+                <div class="member-card animated flipInX">
+                {% load static %}
+                  <img src="{% static "images/members/mycin.jpg" %}" alt="Member Image">
+                  <h2>Tahcin Ul Karim (Mycin)</h2>
+                  <p>Web Developer</p>
+                  <div class="social-buttons">
+                    <a href="https://www.facebook.com/TahcinKarimMycin/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              {% comment %} Member card 7 {% endcomment %}
+              <div class="col-md-4">
+                <div class="member-card animated flipInX">
+                {% load static %}
+                  <img src="{% static "images/members/shahadat.jpg" %}" alt="Member Image">
+                  <h2>Shahadat Hossain</h2>
+                  <p>Front-End Designer</p>
+                  <div class="social-buttons">
+                    <a href="https://www.facebook.com/nowrinislam.arisha" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              {% comment %} Member card 8 {% endcomment %}
+              <div class="col-md-4">
+                <div class="member-card animated flipInX">
+                {% load static %}
+                  <img src="{% static "images/members/rabina.jpg" %}" alt="Member Image">
+                  <h2>Rabina Akter Rosne</h2>
+                  <p>Schedule Assistance</p>
+                  <div class="social-buttons">
+                    <a href="https://web.facebook.com/rabina.akter.50115" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              {% comment %} Member card 9 {% endcomment %}
+              <div class="col-md-4">
+                <div class="member-card animated flipInX pb-5">
+                {% load static %}
+                  <img src="{% static "images/members/female.jpg" %}" alt="Member Image">
+                  <h2>Israt Jahan Eva</h2>
+                  <p>Social media manager </p>
+                  <div class="social-buttons">
+                    <a href="https://www.facebook.com/profile.php?id=100092547103000" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+      </div>
+</div>
+{% endblock content %}

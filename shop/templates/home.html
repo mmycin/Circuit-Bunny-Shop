@@ -1,0 +1,35 @@
+{% extends "base.html" %} 
+{% block title %}Home Page{% endblock title %} 
+
+{% block content %}
+<div class="container mt-4">
+  {% for category in categories %}
+  <div class="mt-4 h3">{{ category }}:</div>
+  <div class="row">
+      {% for item in items %}
+      {% if item.Category == category %}
+      <div class="col-lg-4 col-md-6 mb-4 justify-content-center align-items-center">
+          <div class="card" >
+              <img src="{{ item.Image_URL }}" class="card-img-top" style="width: 10rem" alt="..." />
+              <div class="card-body">
+                  <h5 class="card-title pb-2" id="title{{ item.Title }}">{{ item.Title }}</h5>
+                  <div class="d-flex flex-row text-center">
+                      <h5 class="card-text text-xl-center">
+                          Price: ৳<span id="price({{item.Title}})">{{ item.Current_price }}</span>/- 
+                          <small class="text-decoration-line-through text-danger" style="text-decoration: line-through">৳{{ item.Previous_price }}/-</small>
+                      </h5>
+                  </div>
+                  <a href="{% url 'Details' id=item.id %}" class="btn btn-outline-primary align-bottom mt-3">Details</a>
+                  <span id="div{{ item.Title }}">
+                      <button id="{{ item.Title }}" class="btn btn-primary mt-3 cart">Add to Cart</button>
+                  </span>
+              </div>
+          </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+  </div>
+  <hr>
+  {% endfor %}
+</div>
+{% endblock content %}

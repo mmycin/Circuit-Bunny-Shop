@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Track Your Order{% endblock title %}
+
+{% block content %}
+<div class="container m-4">
+	<div class="col">
+		<h2 class="mt-4">Track Your Order:</h2>
+        <p class=" mb-4">Enter your tracking ID and email to track your order</p>
+			<form method="post" id="trackerForm" action="">
+				{% csrf_token %}
+				<div class="row">
+					<div class="col-md-6">
+						<div class="mb-3">
+							<label for="orderID" class="form-label">Tracker ID</label>
+							<input type="number" class="form-control" name="orderID" required>
+						</div>
+						<div class="mb-3">
+							<label for="email" class="form-label">Email</label>
+							<input type="email" class="form-control" name="email" required placeholder="example@email.com">
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Track Order</button>
+			</form>
+			
+	</div>
+
+
+</div>
+{% endblock content %}
+
+{% block js %}
+{% load static %}
+<script src="{% static "/js/tracker.js" %}"></script>
+{% endblock js %}

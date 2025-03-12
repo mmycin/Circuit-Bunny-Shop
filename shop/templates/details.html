@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}{{item.Title}}{% endblock title %}
+
+{% block content  %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/product.css' %}">
+    <section class="container">
+
+      <div class="main_product">
+          <div class="main_product_image_holder">
+              <img src="{{ item.Image_URL }}" alt="" class="main_product_image">
+          </div>
+
+          <div class="main_product_text">
+
+              <div class="main_product_name">
+                  <h1>{{ item.Title }} </h1>
+              </div>
+
+              <div class="main_product_price">
+                  <h3 class="product_price_currency">৳</h3>
+                  <h1><span id="price({{item.Title}})">{{ item.Current_price }}</span>/-</h1>  <span class="text-decoration-line-through text-danger">৳{{item.Previous_price}}</span>
+              </div>
+              
+              
+              
+              <div class="main_product_description">
+                  <h3 class="product_desc_text">Product Description:</h3>
+                  <div class="product_desc_paragraph">
+                      {{ item.Description}}
+                  </div>
+              </div>
+              <div class="main_product_add-to-card mt-2">
+                <div class="main_add-to-cart_bg">
+                    <!-- icon  -->
+                    <svg class="main_add_to_cart_icon" xmlns="http://www.w3.org/2000/svg" width="20"
+                        height="19" viewBox="0 0 20 19" fill="none">
+                        <g clip-path="url(#clip0_124_330)">
+                            <path
+                                d="M8.74994 12.1208C9.44029 12.1208 9.99994 11.5892 9.99994 10.9333C9.99994 10.2775 9.44029 9.74585 8.74994 9.74585C8.05958 9.74585 7.49994 10.2775 7.49994 10.9333C7.49994 11.5892 8.05958 12.1208 8.74994 12.1208Z"
+                                fill="#002A5B" />
+                            <path
+                                d="M14.5834 12.1208C15.2737 12.1208 15.8334 11.5892 15.8334 10.9333C15.8334 10.2775 15.2737 9.74585 14.5834 9.74585C13.893 9.74585 13.3334 10.2775 13.3334 10.9333C13.3334 11.5892 13.893 12.1208 14.5834 12.1208Z"
+                                fill="#002A5B" />
+                            <path
+                                d="M11.6666 6.5712L15 2.61286H12.5V-0.553802H10.8333V2.61286H8.33331L11.6666 6.5712Z"
+                                fill="#002A5B" />
+                            <path
+                                d="M14.425 7.37085H8.89163L5.14996 -1.1554C5.0231 -1.44431 4.80893 -1.69101 4.53453 -1.86433C4.26013 -2.03764 3.93781 -2.1298 3.60829 -2.12915H1.66663V-0.545814H3.60829L7.56663 8.46335C7.62914 8.60793 7.73531 8.73169 7.87174 8.81903C8.00817 8.90638 8.16877 8.95341 8.33329 8.95419H15C15.1678 8.95372 15.3316 8.90509 15.4699 8.81469C15.6082 8.72428 15.7145 8.5963 15.775 8.44752L18.1333 2.62085H16.35L14.425 7.37085Z"
+                                fill="#002A5B" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_124_330">
+                                <rect width="20" height="19" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span id="div{{item.Title}}">
+                      <button id="{{item.Title}}" class="cart" >Add to Cart</button>
+                    </span>
+                </div>
+            </div>
+
+          </div>
+      </div>
+
+      <hr>      
+
+  </section>
+
+
+
+{% endblock content %}

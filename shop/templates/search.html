@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+{% block title %}Search{% endblock title %} 
+{% block content %}
+
+<div class="container mt-4">
+    <h2 class="mt-3">Search Results for "{{ query }}"</h2>
+    <div class="row">
+        {% for product in products %}
+            <a  href="{% url 'Details' id=product.id %}" class="col-md-3 mb-4 m-1 align-items-center">
+                <div class="card m-3 " style="width: 15rem">
+                    <img src="{{product.Image_URL}}" class="card-img-top" alt="..." />
+                    <h5 class="card-title pb-2 mx-3">{{product.Title}}</h5>
+      <!-- <h5>{{product.id}}</h5> -->
+                <div class="d-flex flex-row text-center">
+                    <h5 class="card-text text-xl-center mx-3 ">
+                    Price: <span id="price({{item.Title}})">{{ item.Current_price }}</span>/-/-
+                    </h5>
+                </div>
+                <button id="{{product.Title}}" class="btn btn-primary mt-3 mb-4 cart mx-3">Add to Cart</button>
+                </div>
+            </a>
+{% empty %}
+<p>No results found. <a style="color: rgb(94, 94, 215);" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="{% url 'preorder' query%}">
+    Preorder Now
+  </a></p>
+</div>
+
+{% endfor %} 
+{% endblock content %}

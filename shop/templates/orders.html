@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Orders{% endblock title %}
+
+
+{% block content %}
+
+<div class="container d-flex align-items-center justify-content-center">
+  <div class="text-center border-black">
+    <h2 class="border-black" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Orders:</h2>
+    <div class="card" style="width: absolute;">
+        <ul class="list-group list-group-flush p-1">
+        {% for order in orders %}
+            <a href="{% url 'orderdetails' order.id %}"><li class="list-group-item p-3">Order ID: {{order.id}} with Price: ৳{{order.TotalPrice}}</li>
+            </a>
+          {% endfor %}
+        </ul>
+      </div>
+</div>
+
+</div>
+
+<div class="container d-flex align-items-center justify-content-center vh-100">
+    <div class="text-center border-black">
+        <h2 class="border-black" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Preorders:</h2>
+        <div class="card" style="width: absolute;">
+            <ul class="list-group list-group-flush p-3">
+            {% for item in items %}
+                <a href="{% url 'preorderdetails' item.id %}"><li class="list-group-item p-3">{{item.Name}} ordered by {{item.Full_name}}</li>
+                </a>
+              {% endfor %}
+            </ul>
+          </div>
+    </div>
+</div>
+{% endblock content %}
